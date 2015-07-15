@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Search";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<!-- Search form -->
+<div class="row">
+    <div class="col-lg-3">
+        <div class="input-group">
+            <input type="search" id="query" class="form-control" placeholder="@PeopleSearch.Views.People.Resources.SearchPlaceHolder" />
+            <span class="input-group-btn">
+                <button id="searchBtn" class="btn btn-default">@PeopleSearch.Views.People.Resources.SearchBtnText</button>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div id="peopleList" class="container-fluid"></div>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/search")   
+}
